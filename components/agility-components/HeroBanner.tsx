@@ -13,7 +13,7 @@ interface IHeroBanner {
   subHeading: string
   image: ImageField
   primaryButton: URLField
-  highPriority?: string
+ 
 }
 
 const HeroBanner = async ({ module, languageCode }: UnloadedModuleProps) => {
@@ -55,8 +55,6 @@ const HeroBanner = async ({ module, languageCode }: UnloadedModuleProps) => {
     }
   }
 
-  // determine if image should be high priority
-  const priority = fields.highPriority === "true"
 
   return (
     <section
@@ -94,7 +92,7 @@ const HeroBanner = async ({ module, languageCode }: UnloadedModuleProps) => {
           <AgilityPic
             image={fields.image}
             className="rounded-lg object-cover object-center shadow-lg"
-            priority={priority}
+       
             fallbackWidth={900}
             sources={[
               { media: "(min-width: 1280px)", width: 1200 },
