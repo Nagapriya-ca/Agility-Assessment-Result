@@ -13,7 +13,7 @@ interface IHeroBanner {
   subHeading: string
   image: ImageField
   primaryButton: URLField
- 
+  
 }
 
 const HeroBanner = async ({ module, languageCode }: UnloadedModuleProps) => {
@@ -55,6 +55,7 @@ const HeroBanner = async ({ module, languageCode }: UnloadedModuleProps) => {
     }
   }
 
+  
 
   return (
     <section
@@ -91,8 +92,7 @@ const HeroBanner = async ({ module, languageCode }: UnloadedModuleProps) => {
         <div data-agility-field="image" className="relative">
           <AgilityPic
             image={fields.image}
-            className="rounded-lg object-cover object-center shadow-lg"
-       
+            className="rounded-lg object-cover object-center shadow-lg"            
             fallbackWidth={900}
             sources={[
               { media: "(min-width: 1280px)", width: 1200 },
